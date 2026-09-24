@@ -8,10 +8,10 @@
           <Static>
           </Static>
           <Dynamic>
-            <Channel Id="%AID%_CH-%PREFIX%" Number="%PREFIX%" Name="ConfigTransfer" Text="Konfigurationstransfer" Icon="ofm-configtransfer">
+            <Channel Id="%AID%_CH-%PREFIX%" Number="%PREFIX%" Name="ConfigTransfer" Text="配置传输" Icon="ofm-configtransfer">
 
-              <ParameterBlock Id="%AID%_PB-nnn" Name="ConfigTransfer-Import" Text="Import" Icon="import" HelpContext="UCT-Import" >
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="Import" UIHint="Headline" />
+              <ParameterBlock Id="%AID%_PB-nnn" Name="ConfigTransfer-Import" Text="导入" Icon="import" HelpContext="UCT-Import" >
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="导入" UIHint="Headline" />
 
                 <!--
                 <Parameter Id="%AID%_P-%TT%00100" Name="ImportInput"   ParameterType="%AID%_PT-TextMaxLen"     Text="Export-String"         Value=""    />
@@ -20,28 +20,28 @@
                 <Parameter Id="%AID%_P-%TT%00103" Name="ImportUserLog" ParameterType="%AID%_PT-Text32KiB"      Text="Import-Resultat"       Value=""    />
                 -->
 
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Eingabe des Transfer-Strings" UIHint="Headline" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="1. 输入传输字符串" UIHint="Headline" />
 
                 <ParameterRefRef RefId="%AID%_P-%TT%00100_R-%TT%0010001" HelpContext="UCT-Transfer-String" />
 
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="2. Auswahl des Import-Ziels" UIHint="Headline" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="2. 选择导入目标" UIHint="Headline" />
 
                 <ParameterRefRef RefId="%AID%_P-%TT%00101_R-%TT%0010101" HelpContext="UCT-Import-Ziel" />
                 <choose ParamRefId="%AID%_P-%TT%00101_R-%TT%0010101">
                   <when test="!=255">
 
-                    <ParameterSeparator Id="%AID%_PS-nnn" Text="3. Ausführen" UIHint="Headline" />
+                    <ParameterSeparator Id="%AID%_PS-nnn" Text="3. 执行" UIHint="Headline" />
 
-                    <Button Id="%AID%_B-%TT%00100" Text="Importieren"   EventHandler="uctBtnImport" EventHandlerParameters="{ &quot;p_importLine&quot;:&quot;%PREFIX%_ImportInput&quot;, &quot;p_channelTarget&quot;:&quot;%PREFIX%_ImportTarget&quot;, &quot;p_messageOutput&quot;:&quot;%PREFIX%_ImportUserLog&quot; }" />
+                    <Button Id="%AID%_B-%TT%00100" Text="导入"   EventHandler="uctBtnImport" EventHandlerParameters="{ &quot;p_importLine&quot;:&quot;%PREFIX%_ImportInput&quot;, &quot;p_channelTarget&quot;:&quot;%PREFIX%_ImportTarget&quot;, &quot;p_messageOutput&quot;:&quot;%PREFIX%_ImportUserLog&quot; }" />
 
-                    <ParameterSeparator Id="%AID%_PS-nnn" Text="4. Ergebnis prüfen" UIHint="Headline" />
+                    <ParameterSeparator Id="%AID%_PS-nnn" Text="4. 检查结果" UIHint="Headline" />
 
                     <ParameterRefRef RefId="%AID%_P-%TT%00103_R-%TT%0010301" HelpContext="UCT-Import-Resultat" />
 
-                    <ParameterSeparator Id="%AID%_PS-nnn" Text="5. Nachbereitung" UIHint="Headline" />
-                    <ParameterSeparator Id="%AID%_PS-nnn" Text="KOs können nicht importiert werden und müssen anschließend manuell konfiguriert werden:" />
-                    <ParameterSeparator Id="%AID%_PS-nnn" Text="a) Verknüpfungen mit GAs" />
-                    <ParameterSeparator Id="%AID%_PS-nnn" Text="b) Individuell angepasste Kommunikationsflags (falls erforderlich, oder vor dem Import vorhanden)" />
+                    <ParameterSeparator Id="%AID%_PS-nnn" Text="5. 后续处理" UIHint="Headline" />
+                    <ParameterSeparator Id="%AID%_PS-nnn" Text="通信对象（KO）无法被导入，之后需手动配置：" />
+                    <ParameterSeparator Id="%AID%_PS-nnn" Text="a) 与组地址的连接" />
+                    <ParameterSeparator Id="%AID%_PS-nnn" Text="b) 单独调整的通信标志（如有需要，或导入前已存在）" />
 
                   </when>
                 </choose>

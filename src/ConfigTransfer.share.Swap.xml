@@ -8,10 +8,10 @@
           <Static>
           </Static>
           <Dynamic>
-            <Channel Id="%AID%_CH-%PREFIX%" Number="%PREFIX%" Name="ConfigTransfer" Text="Konfigurationstransfer" Icon="ofm-configtransfer">
+            <Channel Id="%AID%_CH-%PREFIX%" Number="%PREFIX%" Name="ConfigTransfer" Text="配置传输" Icon="ofm-configtransfer">
 
-              <ParameterBlock Id="%AID%_PB-nnn" Name="ConfigTransfer-Swap" Text="Kanaltausch" Icon="folder-swap-outline--like-card--2" HelpContext="UCT-Kanaltausch" >
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="Kanaltausch" UIHint="Headline" />
+              <ParameterBlock Id="%AID%_PB-nnn" Name="ConfigTransfer-Swap" Text="通道交换" Icon="folder-swap-outline--like-card--2" HelpContext="UCT-Kanaltausch" >
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="通道交换" UIHint="Headline" />
                 <!--
                 <Parameter Id="%AID%_P-%TT%00500" Name="SwapModul"             ParameterType="%AID%_PT-ModuleSelectorWithChannels"          Text="Modul"                 Value="255" />
                 <Parameter Id="%AID%_P-%TT%00501" Name="SwapChannelA"          ParameterType="%AID%_PT-ModuleChannel"                       Text="Quell-Kanal"           Value="1"   />
@@ -24,9 +24,9 @@
                     <ParameterRefRef RefId="%AID%_P-%TT%00501_R-%TT%0050101" IndentLevel="1" />
                     <ParameterRefRef RefId="%AID%_P-%TT%00502_R-%TT%0050201" IndentLevel="1" />
 
-                    <ParameterSeparator Id="%AID%_PS-nnn" Text="Kommunikationsobjekte werden nicht getauscht!" UIHint="Information" />
+                    <ParameterSeparator Id="%AID%_PS-nnn" Text="通信对象不会被交换！" UIHint="Information" />
 
-                    <Button Id="%AID%_B-%TT%00500" Text="Tauschen"      EventHandler="uctBtnSwap"   EventHandlerParameters="{ &quot;p_moduleSelection&quot;:&quot;%PREFIX%_SwapModul&quot;, &quot;p_channelA&quot;:&quot;%PREFIX%_SwapChannelA&quot;, &quot;p_channelB&quot;:&quot;%PREFIX%_SwapChannelB&quot;, &quot;p_messageOutput&quot;:&quot;%PREFIX%_SwapUserLog&quot; }" />
+                    <Button Id="%AID%_B-%TT%00500" Text="交换"      EventHandler="uctBtnSwap"   EventHandlerParameters="{ &quot;p_moduleSelection&quot;:&quot;%PREFIX%_SwapModul&quot;, &quot;p_channelA&quot;:&quot;%PREFIX%_SwapChannelA&quot;, &quot;p_channelB&quot;:&quot;%PREFIX%_SwapChannelB&quot;, &quot;p_messageOutput&quot;:&quot;%PREFIX%_SwapUserLog&quot; }" />
                     <ParameterRefRef RefId="%AID%_P-%TT%00503_R-%TT%0050301" />
                   </when>
                 </choose>

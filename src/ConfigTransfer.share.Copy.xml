@@ -8,10 +8,10 @@
           <Static>
           </Static>
           <Dynamic>
-            <Channel Id="%AID%_CH-%PREFIX%" Number="%PREFIX%" Name="ConfigTransfer" Text="Konfigurationstransfer" Icon="ofm-configtransfer">
+            <Channel Id="%AID%_CH-%PREFIX%" Number="%PREFIX%" Name="ConfigTransfer" Text="配置传输" Icon="ofm-configtransfer">
 
-              <ParameterBlock Id="%AID%_PB-nnn" Name="ConfigTransfer-Copy" Text="Kanalkopie" Icon="card-multiple-outline" HelpContext="UCT-Kanalkopie" >
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="Kanalkopie" UIHint="Headline" />
+              <ParameterBlock Id="%AID%_PB-nnn" Name="ConfigTransfer-Copy" Text="通道复制" Icon="card-multiple-outline" HelpContext="UCT-Kanalkopie" >
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="通道复制" UIHint="Headline" />
                 <!--
                 <Parameter Id="%AID%_P-%TT%00300" Name="CopyModul"     ParameterType="%AID%_PT-ModuleSelector" Text="Modul"                 Value="0"   />
                 <Parameter Id="%AID%_P-%TT%00301" Name="CopySource"    ParameterType="%AID%_PT-ModuleChannel"  Text="Quell-Kanal "          Value="1"   />
@@ -23,7 +23,7 @@
                   <when test="!=255">
                     <ParameterRefRef RefId="%AID%_P-%TT%00301_R-%TT%0030101" IndentLevel="1" />
                     <ParameterRefRef RefId="%AID%_P-%TT%00302_R-%TT%0030201" IndentLevel="1" />
-                    <Button Id="%AID%_B-%TT%00300" Text="Kopieren"      EventHandler="uctBtnCopy"   EventHandlerParameters="{ &quot;p_moduleSelection&quot;:&quot;%PREFIX%_CopyModul&quot;, &quot;p_channelSource&quot;:&quot;%PREFIX%_CopySource&quot;, &quot;p_channelTarget&quot;:&quot;%PREFIX%_CopyTarget&quot;, &quot;p_messageOutput&quot;:&quot;%PREFIX%_CopyUserLog&quot; }" />
+                    <Button Id="%AID%_B-%TT%00300" Text="复制"      EventHandler="uctBtnCopy"   EventHandlerParameters="{ &quot;p_moduleSelection&quot;:&quot;%PREFIX%_CopyModul&quot;, &quot;p_channelSource&quot;:&quot;%PREFIX%_CopySource&quot;, &quot;p_channelTarget&quot;:&quot;%PREFIX%_CopyTarget&quot;, &quot;p_messageOutput&quot;:&quot;%PREFIX%_CopyUserLog&quot; }" />
                     <ParameterRefRef RefId="%AID%_P-%TT%00303_R-%TT%0030301" />
                   </when>
                 </choose>
